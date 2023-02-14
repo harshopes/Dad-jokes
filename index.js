@@ -29,12 +29,12 @@ async function getfact() {
         }
 
         const data = await response.json();
-        factEl.innerText = data[0].fact;
+        factEl.innerText = data[0].joke;
     } catch (error) {
         console.error(error);
     } finally {
         isLoading = false;
-        btn.innerText = "Get Fact";
+        btn.innerText = "Get Jokes";
         btn.disabled = false;
         btn.classList.remove("disabled");
     }
